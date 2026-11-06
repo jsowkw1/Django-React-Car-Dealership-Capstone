@@ -3,9 +3,9 @@
 Status legend: ✅ done and verified · ⏳ waiting for a manual step (see the end of this file)
 
 ---
-**TASK 1 — GitHub repository URL** ⏳
+**TASK 1 — GitHub repository URL** ✅
 Answer: `https://github.com/jsowkw1/Django-React-Car-Dealership-Capstone`
-Verified: not yet. The URL works once the empty public repository exists and the local commit is pushed.
+Verified: public repository, all source code pushed to `main`.
 
 **TASK 2 — Django server running** ✅
 Screenshot: `screenshots/task02_django_server.png`. Console output of `python manage.py runserver 8000`: "System check identified no issues", Django 5.1.15, "Starting development server at http://127.0.0.1:8000/".
@@ -71,8 +71,8 @@ Screenshot: `screenshots/task21_review_submission.png`. URL `localhost:8000/post
 **TASK 22 — Added review** ✅
 Screenshot: `screenshots/task22_added_review.png`. URL `localhost:8000/dealer/1`. The new review by Capstone Reviewer (`jsowkw1`) is highlighted with the same text, 5 stars, purchase date 2026-10-25 and Toyota Camry 2025, marked Positive.
 
-**TASK 23 — GitHub Actions CI/CD** ⏳
-Screenshot: `screenshots/task23_github_actions.png`, captured after the first push once the "CI" workflow finishes successfully.
+**TASK 23 — GitHub Actions CI/CD** ✅
+Screenshot: `screenshots/task23_github_actions.png`. Run #1 of workflow "CI" at `github.com/jsowkw1/Django-React-Car-Dealership-Capstone/actions/runs/42205357737`: Status **Success**, all 4 jobs green (Express API tests, React production build, Django checks and tests, Production image smoke test). The Actions list is in `task23_github_actions_list.png`.
 Workflow: `.github/workflows/ci.yml` (Express tests, React build, Django lint/checks/migrations/tests, Docker image smoke test).
 
 **TASK 24 — Deployment URL** ⏳
@@ -86,10 +86,6 @@ Captured by `python scripts/capture_screenshots.py deployed --base <URL> --api <
 
 ---
 ## Remaining manual steps
-1. **Create the empty GitHub repository**: https://github.com/new → owner `jsowkw1`, name `Django-React-Car-Dealership-Capstone`, **Public**, with no README, .gitignore or license. Then run:
-   ```bash
-   git remote add origin https://github.com/jsowkw1/Django-React-Car-Dealership-Capstone.git
-   git push -u origin main
-   ```
+1. ~~Create the GitHub repository and push~~ (done).
 2. **Deploy on Render**: https://dashboard.render.com → New → Blueprint → pick the repository → leave `MONGODB_URI` empty → Apply (see DEPLOYMENT_GUIDE.md).
 3. Give the deployed URL to the assistant (or run the capture command above) to produce Tasks 16 and 23–28.

@@ -28,7 +28,7 @@ All results below are real outputs from runs on 2026-11-06 on the development ma
 | Car makes / models | `CarTests`, e2e Tasks 14–15 |
 | Sentiment analysis (`Fantastic services` → positive) | Express sentiment tests, `SentimentClientTests`, Task 16 |
 | Frontend build | `npm run build`, CI job |
-| GitHub Actions | CI run (Task 23) |
+| GitHub Actions | CI run #1 (42205357737): all 4 jobs passed, including the Docker image smoke test that builds the production image, starts it and checks `/`, Kansas dealers, reviews, `Fantastic services` sentiment, car models and static files |
 
 ## Express API — `npm test`
 ```

@@ -27,7 +27,7 @@ Nothing is drawn, edited or composited. Files live in [`screenshots/`](../screen
 | 20 | `task20_dealer_details_reviews.png` | `localhost:8000/dealer/1`: details, rating, reviews with sentiment | ✅ captured |
 | 21 | `task21_review_submission.png` | `localhost:8000/postreview/1`, form filled (text, 5 stars, purchase date, Toyota Camry 2025) before submitting | ✅ captured |
 | 22 | `task22_added_review.png` | `localhost:8000/dealer/1` with the new review (same text, rating, car, date) highlighted | ✅ captured |
-| 23 | `task23_github_actions.png` | GitHub Actions page with a successful CI run | ⏳ pending GitHub push |
+| 23 | `task23_github_actions.png` (+ `task23_github_actions_list.png`) | CI run #1 at `github.com/jsowkw1/Django-React-Car-Dealership-Capstone/actions/runs/42205357737`: Success, 4/4 jobs green | ✅ captured |
 | 25 | `task25_deployed_landingpage.png` | Deployed landing page | ⏳ pending deployment |
 | 26 | `task26_deployed_loggedin.png` | Deployed home page logged in (`jsowkw1`) | ⏳ pending deployment |
 | 27 | `task27_deployed_dealer_detail.png` | Deployed dealer details | ⏳ pending deployment |

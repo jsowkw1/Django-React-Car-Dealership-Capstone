@@ -235,7 +235,10 @@ def run_deployed(s, base, api):
 
 
 def run_github(s, repo):
-    s.go(f'https://github.com/{repo}/actions', wait=3); s.shot('task23_github_actions')
+    s.go(f'https://github.com/{repo}/actions', wait=3); s.shot('task23_github_actions_list')
+    s.page.locator('a[href*="/actions/runs/"]').first.click()
+    s.page.wait_for_load_state('networkidle')
+    s.shot('task23_github_actions', wait=2.5)
 
 
 def main():
