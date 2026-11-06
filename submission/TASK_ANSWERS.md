@@ -49,9 +49,8 @@ Screenshot: `screenshots/task14_car_makes.png`. URL `localhost:8000/admin/django
 **TASK 15 — Car models** ✅
 Screenshot: `screenshots/task15_car_models.png`. URL `localhost:8000/admin/djangoapp/carmodel/`, 29 models with make, type, year and dealer id.
 
-**TASK 16 — Sentiment analyzer (deployed URL)** ⏳
-Screenshot to upload: `screenshots/task16_sentiment_analyzer.png`, URL `https://<deployment>/djangoapp/analyze/Fantastic%20services`.
-Local evidence already captured: `task16_sentiment_analyzer_local.png` (`localhost:3030/analyze/Fantastic%20services` returns `"sentiment": "positive"`, score 4).
+**TASK 16 — Sentiment analyzer (deployed URL)** ✅
+Screenshot: `screenshots/task16_sentiment_analyzer.png`. URL `https://bestcars-dealership-i2j9.onrender.com/djangoapp/analyze/Fantastic%20services` → `"sentiment": "positive"`, score 4, positive word "fantastic". Local Express endpoint: `task16_sentiment_analyzer_local.png`.
 
 **TASK 17 — Homepage before login** ✅
 Screenshot: `screenshots/task17_homepage_guest.png`. URL `localhost:8000`, dealer cards, Login/Register in the navbar.
@@ -75,17 +74,23 @@ Screenshot: `screenshots/task22_added_review.png`. URL `localhost:8000/dealer/1`
 Screenshot: `screenshots/task23_github_actions.png`. Run #1 of workflow "CI" at `github.com/jsowkw1/Django-React-Car-Dealership-Capstone/actions/runs/42205357737`: Status **Success**, all 4 jobs green (Express API tests, React production build, Django checks and tests, Production image smoke test). The Actions list is in `task23_github_actions_list.png`.
 Workflow: `.github/workflows/ci.yml` (Express tests, React build, Django lint/checks/migrations/tests, Docker image smoke test).
 
-**TASK 24 — Deployment URL** ⏳
-Answer: the Render URL (`https://bestcars-dealership-….onrender.com`). It will be filled in once the deployment exists.
+**TASK 24 — Deployment URL** ✅
+Answer: `https://bestcars-dealership-i2j9.onrender.com`
+(Render free web service `bestcars-dealership`, Docker image from this repository, deployed from `render.yaml`. It sleeps after inactivity, so the first request can take about a minute.)
 
-**TASK 25 — Deployed landing page** ⏳ `screenshots/task25_deployed_landingpage.png`
-**TASK 26 — Deployed logged-in page** ⏳ `screenshots/task26_deployed_loggedin.png`
-**TASK 27 — Deployed dealer details** ⏳ `screenshots/task27_deployed_dealer_detail.png`
-**TASK 28 — Deployed added review** ⏳ `screenshots/task28_deployed_add_review.png`
-Captured by `python scripts/capture_screenshots.py deployed --base <URL> --api <URL>/djangoapp`.
+**TASK 25 — Deployed landing page** ✅
+Screenshot: `screenshots/task25_deployed_landingpage.png`. URL `https://bestcars-dealership-i2j9.onrender.com`, hero and dealer list, logged out.
+
+**TASK 26 — Deployed logged-in page** ✅
+Screenshot: `screenshots/task26_deployed_loggedin.png`. URL `https://bestcars-dealership-i2j9.onrender.com`, `jsowkw1` in the navbar, Post Review buttons.
+
+**TASK 27 — Deployed dealer details** ✅
+Screenshot: `screenshots/task27_deployed_dealer_detail.png`. URL `https://bestcars-dealership-i2j9.onrender.com/dealer/3`, Prairie Village Premium Cars, details, rating and 2 reviews.
+
+**TASK 28 — Deployed added review** ✅
+Screenshot: `screenshots/task28_deployed_add_review.png`. URL `https://bestcars-dealership-i2j9.onrender.com/dealer/3`, the new review by Capstone Reviewer (jsowkw1) is highlighted: "Deployed test: fantastic services and a very helpful, friendly team.", 5 stars, BMW X5 2026, Positive. Reviews (3).
 
 ---
-## Remaining manual steps
-1. ~~Create the GitHub repository and push~~ (done).
-2. **Deploy on Render**: https://dashboard.render.com → New → Blueprint → pick the repository → leave `MONGODB_URI` empty → Apply (see DEPLOYMENT_GUIDE.md).
-3. Give the deployed URL to the assistant (or run the capture command above) to produce Tasks 16 and 23–28.
+## Status
+All 28 tasks are complete and verified. No manual steps remain.
+Note: the free Render instance uses the embedded MongoDB, so reviews posted on the live site reset when the service restarts (the seed data comes back automatically).

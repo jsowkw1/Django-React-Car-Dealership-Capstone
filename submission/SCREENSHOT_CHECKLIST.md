@@ -20,7 +20,7 @@ Nothing is drawn, edited or composited. Files live in [`screenshots/`](../screen
 | 13 | `task13_admin_logout.png` | Django Admin "Logged out" page at `/admin/logout/` | ✅ captured |
 | 14 | `task14_car_makes.png` (+ `task14_car_makes_api.png`) | Admin list of 8 car makes at `/admin/djangoapp/carmake/`; JSON at `/djangoapp/get_cars` | ✅ captured |
 | 15 | `task15_car_models.png` | Admin list of 29 car models at `/admin/djangoapp/carmodel/` | ✅ captured |
-| 16 | `task16_sentiment_analyzer.png` | Sentiment analyzer for "Fantastic services" on the **deployed** URL | ⏳ pending deployment (local evidence: `task16_sentiment_analyzer_local.png`) |
+| 16 | `task16_sentiment_analyzer.png` (+ `task16_sentiment_analyzer_local.png`) | `https://bestcars-dealership-i2j9.onrender.com/djangoapp/analyze/Fantastic%20services` → positive, score 4 | ✅ captured |
 | 17 | `task17_homepage_guest.png` | Dealers on `localhost:8000/` before login (Login/Register in navbar) | ✅ captured |
 | 18 | `task18_homepage_loggedin.png` | Dealers after login: `jsowkw1` in navbar and **Post Review** buttons | ✅ captured |
 | 19 | `task19_dealers_by_state.png` | `localhost:8000/dealers/Kansas`, "Dealerships in Kansas", 4 dealers | ✅ captured |
@@ -28,9 +28,9 @@ Nothing is drawn, edited or composited. Files live in [`screenshots/`](../screen
 | 21 | `task21_review_submission.png` | `localhost:8000/postreview/1`, form filled (text, 5 stars, purchase date, Toyota Camry 2025) before submitting | ✅ captured |
 | 22 | `task22_added_review.png` | `localhost:8000/dealer/1` with the new review (same text, rating, car, date) highlighted | ✅ captured |
 | 23 | `task23_github_actions.png` (+ `task23_github_actions_list.png`) | CI run #1 at `github.com/jsowkw1/Django-React-Car-Dealership-Capstone/actions/runs/42205357737`: Success, 4/4 jobs green | ✅ captured |
-| 25 | `task25_deployed_landingpage.png` | Deployed landing page | ⏳ pending deployment |
-| 26 | `task26_deployed_loggedin.png` | Deployed home page logged in (`jsowkw1`) | ⏳ pending deployment |
-| 27 | `task27_deployed_dealer_detail.png` | Deployed dealer details | ⏳ pending deployment |
-| 28 | `task28_deployed_add_review.png` | Review added on the deployed app | ⏳ pending deployment |
+| 25 | `task25_deployed_landingpage.png` | Deployed landing page at `https://bestcars-dealership-i2j9.onrender.com` | ✅ captured |
+| 26 | `task26_deployed_loggedin.png` | Deployed home page, `jsowkw1` logged in, Post Review buttons | ✅ captured |
+| 27 | `task27_deployed_dealer_detail.png` | `https://bestcars-dealership-i2j9.onrender.com/dealer/3` details and reviews | ✅ captured |
+| 28 | `task28_deployed_add_review.png` | `https://bestcars-dealership-i2j9.onrender.com/dealer/3` with the newly added review highlighted | ✅ captured |
 
 Tasks 1 and 24 are URLs, not screenshots.

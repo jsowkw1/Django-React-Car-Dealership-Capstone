@@ -1,5 +1,7 @@
 # Deployment guide
 
+**Live deployment:** https://bestcars-dealership-i2j9.onrender.com (Render Blueprint `bestcars-capstone`, service `bestcars-dealership`, verified on 2026-11-06)
+
 ## Chosen hosting
 | Component | Where it runs | Why |
 |-----------|---------------|-----|

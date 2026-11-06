@@ -3,7 +3,11 @@
 [![CI](https://github.com/jsowkw1/Django-React-Car-Dealership-Capstone/actions/workflows/ci.yml/badge.svg)](https://github.com/jsowkw1/Django-React-Car-Dealership-Capstone/actions/workflows/ci.yml)
 
 Full-stack capstone project (IBM Full Stack Software Developer): a nationwide car-dealership
-review site. Visitors browse dealerships and filter them by state; registered users post reviews,
+review site.
+
+**Live demo:** https://bestcars-dealership-i2j9.onrender.com (Render free tier: the first request after idle can take about a minute)
+
+Visitors browse dealerships and filter them by state; registered users post reviews,
 which are automatically scored by a sentiment analyzer.
 
 | Layer | Technology | Responsibility |
