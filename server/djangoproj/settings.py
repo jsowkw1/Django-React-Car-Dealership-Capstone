@@ -5,8 +5,10 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-REPO_DIR = BASE_DIR.parent
-FRONTEND_DIST = Path(os.getenv('FRONTEND_DIST', REPO_DIR / 'frontend' / 'dist'))
+FRONTEND_DIR = BASE_DIR / 'frontend'
+FRONTEND_DIST = Path(os.getenv('FRONTEND_DIST', FRONTEND_DIR / 'dist'))
+# Static HTML pages (About.html, Contact.html) and their CSS/images
+FRONTEND_STATIC = FRONTEND_DIR / 'static'
 
 load_dotenv(BASE_DIR / '.env')
 
@@ -60,8 +62,8 @@ ROOT_URLCONF = 'djangoproj.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        # The React production build (index.html) is rendered as a template.
-        'DIRS': [FRONTEND_DIST, BASE_DIR / 'templates'],
+        # The React production build (index.html) and the static About/Contact pages are templates.
+        'DIRS': [FRONTEND_DIST, FRONTEND_STATIC],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -96,7 +98,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
-STATICFILES_DIRS = [FRONTEND_DIST] if FRONTEND_DIST.exists() else []
+STATICFILES_DIRS = [d for d in (FRONTEND_DIST, FRONTEND_STATIC) if d.exists()]
 STORAGES = {
     'default': {'BACKEND': 'django.core.files.storage.FileSystemStorage'},
     'staticfiles': {

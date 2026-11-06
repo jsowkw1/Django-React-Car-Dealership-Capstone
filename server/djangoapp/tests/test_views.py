@@ -184,9 +184,18 @@ class SentimentClientTests(TestCase):
 
 class FrontendTests(TestCase):
     def test_spa_routes_resolve(self):
-        for url in ['/', '/about', '/contact', '/login', '/register', '/dealers', '/dealers/Kansas',
+        for url in ['/', '/login', '/register', '/dealers', '/dealers/Kansas',
                     '/dealer/1', '/postreview/1']:
             self.assertIn(self.client.get(url).status_code, (200, 503), url)
+
+    def test_static_about_and_contact_pages(self):
+        about = self.client.get('/about')
+        self.assertContains(about, 'Meet our team')
+        self.assertContains(about, 'daniel.morgan@bestcars-demo.com')
+        self.assertContains(about, 'class="nav-link active" href="/about"')
+        contact = self.client.get('/contact')
+        self.assertContains(contact, 'support@bestcars-demo.com')
+        self.assertContains(contact, 'class="nav-link active" href="/contact"')
 
     def test_admin_login_page(self):
         self.assertEqual(self.client.get('/admin/login/').status_code, 200)

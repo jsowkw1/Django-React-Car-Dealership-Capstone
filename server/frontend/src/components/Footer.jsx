@@ -10,8 +10,8 @@ export default function Footer() {
         </div>
         <div className="footer-links">
           <Link to="/dealers">Dealers</Link>
-          <Link to="/about">About Us</Link>
-          <Link to="/contact">Contact Us</Link>
+          <a href="/about">About Us</a>
+          <a href="/contact">Contact Us</a>
           <a href="/admin/">Admin</a>
         </div>
         <p className="muted-light small">

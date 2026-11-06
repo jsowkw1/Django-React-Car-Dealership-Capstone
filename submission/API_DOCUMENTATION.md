@@ -2,8 +2,8 @@
 
 Two JSON APIs make up the backend:
 
-1. **Express + MongoDB API** (`express-api/`, default `http://localhost:3030`): owns dealers, reviews and the sentiment analyzer.
-2. **Django API** (`backend/djangoapp/`, `http://localhost:8000/djangoapp/`): authentication, car makes/models, and proxies
+1. **Express + MongoDB API** (`server/database/`, default `http://localhost:3030`): owns dealers, reviews and the sentiment analyzer.
+2. **Django API** (`server/djangoapp/`, `http://localhost:8000/djangoapp/`): authentication, car makes/models, and proxies
    to the Express API for the React frontend.
 
 Real requests and responses for every endpoint are in [CURL_COMMANDS.md](CURL_COMMANDS.md).
@@ -61,7 +61,7 @@ Real requests and responses for every endpoint are in [CURL_COMMANDS.md](CURL_CO
 The server adds `id` (next integer), `sentiment` (computed from the review text) and `created_at`.
 
 ### Sentiment analyzer
-Implementation: `express-api/services/sentiment.js`, using the AFINN-165 word list (npm package `sentiment`,
+Implementation: `server/database/services/sentiment.js`, using the AFINN-165 word list (npm package `sentiment`,
 which also handles negation such as "not good"). Each known word scores −5…+5; `comparative` = total score ÷ number
 of words. Label: `positive` if comparative > 0.05, `negative` if < −0.05, otherwise `neutral`. Nothing is hard-coded
 for particular phrases.

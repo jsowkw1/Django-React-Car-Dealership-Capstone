@@ -7,13 +7,13 @@ All results below are real outputs from runs on 2026-11-06 on the development ma
 ## Summary
 | Area | Command | Result |
 |------|---------|--------|
-| Express API (13 tests) | `cd express-api && npm test` | 13 passed, 0 failed |
+| Express API (13 tests) | `cd server/database && npm test` | 13 passed, 0 failed |
 | Django system checks | `python manage.py check` | no issues |
 | Django deploy checks (DEBUG=False) | `python manage.py check --deploy --fail-level ERROR` | passed (warnings only: HSTS/SSL-redirect left to the hosting proxy) |
 | Django migrations | `python manage.py makemigrations --check --dry-run` | No changes detected |
 | Django tests (22 tests) | `python manage.py test djangoapp` | 22 passed (also passed with DEBUG=False) |
 | Lint | `flake8 djangoapp djangoproj --max-line-length=130 --exclude=migrations` | no findings |
-| Frontend production build | `cd frontend && npm run build` | built successfully |
+| Frontend production build | `cd server/frontend && npm run build` | built successfully |
 | End-to-end (browser) | `python scripts/capture_screenshots.py local` | full flow passed: register → home → logout → login → filter by state → dealer details → post review → review shown → Express endpoints → Django admin login/car makes/car models/logout |
 | API via cURL | `python scripts/run_curl_examples.py` | 26 requests, every status code as expected (200/201/400/401/404), see CURL_COMMANDS.md |
 

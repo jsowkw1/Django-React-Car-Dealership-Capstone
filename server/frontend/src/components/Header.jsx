@@ -30,8 +30,9 @@ export default function Header() {
         <nav className={`nav${open ? ' open' : ''}`} onClick={(e) => e.target.tagName === 'A' && setOpen(false)}>
           <NavLink to="/" end className={navClass}>Home</NavLink>
           <NavLink to="/dealers" className={navClass}>Dealers</NavLink>
-          <NavLink to="/about" className={navClass}>About Us</NavLink>
-          <NavLink to="/contact" className={navClass}>Contact Us</NavLink>
+          {/* About Us and Contact Us are static Django pages (frontend/static/*.html) */}
+          <a href="/about" className="nav-link">About Us</a>
+          <a href="/contact" className="nav-link">Contact Us</a>
           <div className="nav-auth">
             {user ? (
               <>

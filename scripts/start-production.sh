@@ -8,10 +8,10 @@ if [ -z "$EXPRESS_API_KEY" ]; then
 fi
 export EXPRESS_API_KEY
 
-cd /app/express-api
+cd /app/server/database
 PORT=3030 API_KEY="$EXPRESS_API_KEY" node server.js &
 
-cd /app/backend
+cd /app/server
 python manage.py migrate --noinput
 python manage.py seed_demo
 

@@ -234,6 +234,12 @@ def run_deployed(s, base, api):
     s.go(f'{api}/analyze/Fantastic services', wait=2); s.shot('task16_sentiment_analyzer')
 
 
+def run_pages(s, base):
+    s.go(f'{base}/about', wait=2); s.scroll_to('.values'); s.shot('task03_about_us')
+    s.scroll_to('.team'); s.shot('task03_about_us_team')
+    s.go(f'{base}/contact', wait=2); s.shot('task04_contact_us')
+
+
 def run_github(s, repo):
     s.go(f'https://github.com/{repo}/actions', wait=3); s.shot('task23_github_actions_list')
     s.page.locator('a[href*="/actions/runs/"]').first.click()
@@ -243,7 +249,7 @@ def run_github(s, repo):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('stage', choices=['local', 'admin', 'deployed', 'github'])
+    parser.add_argument('stage', choices=['local', 'pages', 'admin', 'deployed', 'github'])
     parser.add_argument('--base', default='http://localhost:8000')
     parser.add_argument('--api', default='http://localhost:3030')
     parser.add_argument('--repo', default='jsowkw1/Django-React-Car-Dealership-Capstone')
@@ -254,6 +260,8 @@ def main():
         try:
             if args.stage == 'local':
                 run_local(s, args.base.rstrip('/'), args.api.rstrip('/'))
+            elif args.stage == 'pages':
+                run_pages(s, args.base.rstrip('/'))
             elif args.stage == 'admin':
                 run_admin(s, args.base.rstrip('/'))
             elif args.stage == 'deployed':

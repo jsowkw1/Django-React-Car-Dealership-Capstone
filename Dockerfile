@@ -4,18 +4,18 @@
 
 # ---------- React build ----------
 FROM node:22-bookworm-slim AS frontend
-WORKDIR /app/frontend
-COPY frontend/package.json frontend/package-lock.json ./
+WORKDIR /app/server/frontend
+COPY server/frontend/package.json server/frontend/package-lock.json ./
 RUN npm ci
-COPY frontend/ ./
+COPY server/frontend/ ./
 RUN npm run build
 
 # ---------- Express dependencies (also downloads the embedded MongoDB binary for Debian 12) ----------
 FROM node:22-bookworm-slim AS api
-WORKDIR /app/express-api
-COPY express-api/package.json express-api/package-lock.json ./
+WORKDIR /app/server/database
+COPY server/database/package.json server/database/package-lock.json ./
 RUN npm ci --omit=dev
-COPY express-api/ ./
+COPY server/database/ ./
 
 # ---------- Runtime ----------
 FROM python:3.12-slim-bookworm
@@ -23,7 +23,6 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     DEBUG=False \
     PORT=8000 \
-    FRONTEND_DIST=/app/frontend/dist \
     SQLITE_PATH=/app/data/db.sqlite3 \
     BACKEND_URL=http://127.0.0.1:3030 \
     MONGO_CACHE_GB=0.25
@@ -32,14 +31,17 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 COPY --from=node:22-bookworm-slim /usr/local/bin/node /usr/local/bin/node
 WORKDIR /app
-COPY backend/requirements.txt backend/requirements.txt
-RUN pip install --no-cache-dir -r backend/requirements.txt
-COPY backend/ backend/
-COPY --from=frontend /app/frontend/dist frontend/dist
-COPY --from=api /app/express-api express-api
+COPY server/requirements.txt server/requirements.txt
+RUN pip install --no-cache-dir -r server/requirements.txt
+COPY server/manage.py server/
+COPY server/djangoproj server/djangoproj
+COPY server/djangoapp server/djangoapp
+COPY server/frontend/static server/frontend/static
+COPY --from=frontend /app/server/frontend/dist server/frontend/dist
+COPY --from=api /app/server/database server/database
 COPY scripts/start-production.sh scripts/start-production.sh
 RUN mkdir -p /app/data \
-    && cd backend && DJANGO_SECRET_KEY=build-only python manage.py collectstatic --noinput \
+    && cd server && DJANGO_SECRET_KEY=build-only python manage.py collectstatic --noinput \
     && useradd --create-home appuser && chown -R appuser /app
 USER appuser
 EXPOSE 8000

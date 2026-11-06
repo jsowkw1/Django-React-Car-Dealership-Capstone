@@ -3,13 +3,13 @@ __pycache__/
 *.py[cod]
 .venv/
 venv/
-backend/db.sqlite3
-backend/staticfiles/
+server/db.sqlite3
+server/staticfiles/
 
 # Node
 node_modules/
-frontend/dist/
-express-api/.mongo-data/
+server/frontend/dist/
+server/database/.mongo-data/
 npm-debug.log*
 
 # Environment / secrets

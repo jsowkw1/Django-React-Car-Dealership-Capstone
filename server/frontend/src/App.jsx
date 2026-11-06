@@ -6,9 +6,7 @@ import Dealers from './pages/Dealers';
 import DealerDetail from './pages/DealerDetail';
 import PostReview from './pages/PostReview';
 import Login from './pages/Login';
-import Register from './pages/Register';
-import About from './pages/About';
-import Contact from './pages/Contact';
+import Register from './components/Register/Register';
 import NotFound from './pages/NotFound';
 
 export default function App() {
@@ -24,8 +22,6 @@ export default function App() {
           <Route path="/postreview/:id" element={<PostReview />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

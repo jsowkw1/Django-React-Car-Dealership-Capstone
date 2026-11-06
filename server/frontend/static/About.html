@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Best Cars Dealership Reviews</title>
+  <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/" class="brand"><img src="/static/favicon.svg" alt="" width="34" height="34"><span>Best<strong>Cars</strong></span></a>
+      <nav class="nav">
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="/dealers">Dealers</a>
+        <a class="nav-link active" href="/about" aria-current="page">About Us</a>
+        <a class="nav-link" href="/contact">Contact Us</a>
+        <div class="nav-auth" id="nav-auth"></div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero" style="background-image: linear-gradient(rgba(11,31,58,.82), rgba(11,31,58,.82)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600&q=70&auto=format&fit=crop');">
+    <div class="container">
+      <span class="eyebrow">About Us</span>
+      <h1>Driving trust in car buying since 2009</h1>
+      <p>Best Cars is a national network of independent and franchise dealerships. We publish honest customer
+        reviews, analyse their sentiment automatically and work with dealers to keep service quality high.</p>
+    </div>
+  </section>
+
+  <main class="container page">
+    <div class="values">
+      <div class="card value"><h3>🔍 Transparency</h3><p>Every review is published as written, with its rating and detected sentiment.</p></div>
+      <div class="card value"><h3>🤝 Verified dealers</h3><p>Partner dealerships are inspected for fair pricing and customer care.</p></div>
+      <div class="card value"><h3>⚡ Fast support</h3><p>Our team follows up on negative experiences within two business days.</p></div>
+    </div>
+
+    <h2 class="section-title center">Meet our team</h2>
+    <p class="muted center">Demonstration team: fictional profiles created for this capstone project.</p>
+
+    <div class="team">
+      <article class="card team-card">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=480&h=480&q=70&auto=format&fit=crop&crop=faces" alt="Portrait of Daniel Morgan">
+        <div class="card-body">
+          <h3>Daniel Morgan</h3>
+          <p class="role">Chief Executive Officer</p>
+          <p class="bio">Twenty years in automotive retail. Daniel built the Best Cars network around one idea: transparent, review-driven car buying.</p>
+          <a class="email" href="mailto:daniel.morgan@bestcars-demo.com">✉ daniel.morgan@bestcars-demo.com</a>
+        </div>
+      </article>
+      <article class="card team-card">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=480&h=480&q=70&auto=format&fit=crop&crop=faces" alt="Portrait of Sarah Mitchell">
+        <div class="card-body">
+          <h3>Sarah Mitchell</h3>
+          <p class="role">Head of Dealer Relations</p>
+          <p class="bio">Sarah onboards and audits every partner dealership, making sure each one meets our service and pricing standards.</p>
+          <a class="email" href="mailto:sarah.mitchell@bestcars-demo.com">✉ sarah.mitchell@bestcars-demo.com</a>
+        </div>
+      </article>
+      <article class="card team-card">
+        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=480&h=480&q=70&auto=format&fit=crop&crop=faces" alt="Portrait of James Carter">
+        <div class="card-body">
+          <h3>James Carter</h3>
+          <p class="role">Lead Software Engineer</p>
+          <p class="bio">James leads the Django, React and Node.js platform, including the review sentiment analysis service.</p>
+          <a class="email" href="mailto:james.carter@bestcars-demo.com">✉ james.carter@bestcars-demo.com</a>
+        </div>
+      </article>
+      <article class="card team-card">
+        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=480&h=480&q=70&auto=format&fit=crop&crop=faces" alt="Portrait of Olivia Bennett">
+        <div class="card-body">
+          <h3>Olivia Bennett</h3>
+          <p class="role">Customer Experience Manager</p>
+          <p class="bio">Olivia and her team answer customer questions and help resolve any issue raised in a review within 48 hours.</p>
+          <a class="email" href="mailto:olivia.bennett@bestcars-demo.com">✉ olivia.bennett@bestcars-demo.com</a>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2026 Best Cars — IBM Full Stack Capstone demonstration project. All data is fictional.</p>
+      <div><a href="/dealers">Dealers</a><a href="/about">About Us</a><a href="/contact">Contact Us</a><a href="/admin/">Admin</a></div>
+    </div>
+  </footer>
+  <script src="/static/auth-nav.js"></script>
+</body>
+</html>

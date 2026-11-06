@@ -10,7 +10,7 @@
 
 ## 1. Express + MongoDB API
 ```bash
-cd express-api
+cd server/database
 npm install
 cp .env.example .env            # optional; defaults work
 npm start                       # → [api] Express API listening on http://localhost:3030
@@ -24,9 +24,9 @@ On first start the database is empty, so the server seeds 15 dealerships and 14 
 
 ## 2. React frontend
 ```bash
-cd frontend
+cd server/frontend
 npm install
-npm run build                   # → frontend/dist (served by Django under /static/)
+npm run build                   # → server/frontend/dist (served by Django under /static/)
 ```
 For hot-reload development run `npm run dev` (http://localhost:5173); `/djangoapp` and `/admin`
 requests are proxied to Django on port 8000.
@@ -35,8 +35,8 @@ requests are proxied to Django on port 8000.
 ```bash
 python -m venv .venv
 .venv\Scripts\activate          # Windows   (macOS/Linux: source .venv/bin/activate)
-pip install -r backend/requirements.txt
-cd backend
+pip install -r server/requirements.txt
+cd server
 cp ../.env.example .env         # optional
 python manage.py migrate
 python manage.py seed_demo
@@ -64,7 +64,7 @@ Open http://localhost:8000.
 | `MONGO_DATA_DIR` | Express | empty | Persist embedded MongoDB data |
 | `API_KEY` | Express | empty | Require `X-API-Key` on `POST /insert_review` |
 
-Secrets are never committed; see `.env.example` and `express-api/.env.example`.
+Secrets are never committed; see `.env.example` and `server/database/.env.example`.
 
 ## Useful URLs (local)
 | URL | What |

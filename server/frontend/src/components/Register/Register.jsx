@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '../services/auth';
-import { Alert } from '../components/common';
+import { useAuth } from '../../services/auth';
+import { Alert } from '../common';
 
 const FIELDS = [
   { name: 'userName', label: 'Username', type: 'text', autoComplete: 'username', placeholder: 'Choose a username' },

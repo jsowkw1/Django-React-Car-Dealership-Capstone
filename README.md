@@ -1,5 +1,9 @@
 # Car Dealership Review Application
 
+- **Repository name:** Django-React-Car-Dealership-Capstone
+- **Project name:** Car Dealership Review Application (Best Cars dealership reviews), IBM Full Stack Software Developer Capstone
+- **Repository URL:** https://github.com/jsowkw1/Django-React-Car-Dealership-Capstone
+
 [![CI](https://github.com/jsowkw1/Django-React-Car-Dealership-Capstone/actions/workflows/ci.yml/badge.svg)](https://github.com/jsowkw1/Django-React-Car-Dealership-Capstone/actions/workflows/ci.yml)
 
 Full-stack capstone project (IBM Full Stack Software Developer): a nationwide car-dealership
@@ -45,15 +49,15 @@ git clone https://github.com/jsowkw1/Django-React-Car-Dealership-Capstone.git
 cd Django-React-Car-Dealership-Capstone
 
 # 1) Express + MongoDB API (embedded MongoDB is downloaded and seeded automatically)
-cd express-api && npm install && npm start          # http://localhost:3030
+cd server/database && npm install && npm start          # http://localhost:3030
 
 # 2) React build (in a second terminal)
-cd frontend && npm install && npm run build
+cd server/frontend && npm install && npm run build
 
 # 3) Django (in a third terminal)
 python -m venv .venv && .venv/Scripts/activate      # macOS/Linux: source .venv/bin/activate
-pip install -r backend/requirements.txt
-cd backend
+pip install -r server/requirements.txt
+cd server
 python manage.py migrate
 python manage.py seed_demo                          # root superuser, demo users, car makes/models
 python manage.py runserver 8000                     # http://localhost:8000
@@ -71,21 +75,26 @@ In production the superuser password comes from `DJANGO_SUPERUSER_PASSWORD`.
 
 ## Tests
 ```bash
-cd express-api && npm test                        # 13 API tests (node:test + supertest + embedded MongoDB)
-cd backend && python manage.py test djangoapp     # 22 Django tests
-cd frontend && npm run build                      # production build
+cd server/database && npm test                        # 13 API tests (node:test + supertest + embedded MongoDB)
+cd server && python manage.py test djangoapp     # 22 Django tests
+cd server/frontend && npm run build                      # production build
 ```
 
 ## Project structure
 ```
-backend/            Django project (djangoproj/) and app (djangoapp/: models, views, admin, tests, seed command)
-express-api/        Express API: models/, routes/, controllers/, middleware/, services/, seed/, tests/
-frontend/           React app: src/components, src/pages, src/services, src/styles
-scripts/            Screenshot automation, cURL example runner, production start script
-screenshots/        Genuine screenshots for the peer-graded submission
-submission/         Documentation and answers for the 28 tasks
-.github/workflows/  CI pipeline
-Dockerfile, render.yaml   Production container and Render blueprint
+server/                     Django project (course layout)
+├── manage.py, requirements.txt
+├── djangoproj/             settings, urls, wsgi
+├── djangoapp/              models (CarMake, CarModel), views, admin, restapis, tests, seed command
+├── frontend/               React app (Vite)
+│   ├── static/             About.html, Contact.html, style.css (static Django pages)
+│   └── src/                components/ (Register/Register.jsx, Header, DealerList…), pages/, services/, styles/
+└── database/               Express + MongoDB API: models/, routes/, controllers/, middleware/, services/, seed/, tests/
+scripts/                    Screenshot automation, cURL example runner, production start script
+screenshots/                Genuine screenshots for the peer-graded submission
+submission/                 Documentation, answers and saved command outputs
+.github/workflows/ci.yml    CI pipeline
+Dockerfile, render.yaml     Production container and Render blueprint
 ```
 
 ## Documentation

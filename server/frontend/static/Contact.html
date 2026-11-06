@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Best Cars Dealership Reviews</title>
+  <link rel="icon" type="image/svg+xml" href="/static/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <a href="/" class="brand"><img src="/static/favicon.svg" alt="" width="34" height="34"><span>Best<strong>Cars</strong></span></a>
+      <nav class="nav">
+        <a class="nav-link" href="/">Home</a>
+        <a class="nav-link" href="/dealers">Dealers</a>
+        <a class="nav-link" href="/about">About Us</a>
+        <a class="nav-link active" href="/contact" aria-current="page">Contact Us</a>
+        <div class="nav-auth" id="nav-auth"></div>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-hero" style="background-image: linear-gradient(rgba(11,31,58,.8), rgba(11,31,58,.8)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1600&q=70&auto=format&fit=crop');">
+    <div class="container">
+      <span class="eyebrow">Contact Us</span>
+      <h1>We are here to help</h1>
+      <p>Questions about a dealer, a review or your account? Reach our customer team by phone, email or the form below.</p>
+    </div>
+  </section>
+
+  <main class="container page contact-grid">
+    <div class="card contact-card">
+      <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=900&q=70&auto=format&fit=crop" alt="Best Cars head office showroom">
+      <div class="card-body">
+        <h3>Best Cars Head Office</h3>
+        <ul class="info-list">
+          <li><span>Address</span>1200 Main Street, Suite 400, Kansas City, MO 64105</li>
+          <li><span>Phone</span><a href="tel:+18165550100">+1 (816) 555-0100</a></li>
+          <li><span>Email</span><a href="mailto:support@bestcars-demo.com">support@bestcars-demo.com</a></li>
+          <li><span>Dealer partnerships</span><a href="mailto:partners@bestcars-demo.com">partners@bestcars-demo.com</a></li>
+          <li><span>Hours</span>Mon–Fri 8:00–18:00 CT · Sat 9:00–14:00 CT</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card form-card">
+      <h2>Send us a message</h2>
+      <div class="alert" id="sent" hidden></div>
+      <form id="contact-form">
+        <div class="row">
+          <label class="field"><span>Name</span><input class="input" name="name" required placeholder="Your name"></label>
+          <label class="field"><span>Email</span><input class="input" name="email" type="email" required placeholder="you@example.com"></label>
+        </div>
+        <label class="field"><span>Subject</span><input class="input" name="subject" placeholder="How can we help?"></label>
+        <label class="field"><span>Message</span><textarea class="input" name="message" rows="5" required placeholder="Write your message…"></textarea></label>
+        <button class="btn btn-accent btn-block" type="submit">Send message</button>
+      </form>
+      <p class="muted">Demonstration contact details: phone numbers and emails are fictional.</p>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2026 Best Cars — IBM Full Stack Capstone demonstration project. All data is fictional.</p>
+      <div><a href="/dealers">Dealers</a><a href="/about">About Us</a><a href="/contact">Contact Us</a><a href="/admin/">Admin</a></div>
+    </div>
+  </footer>
+  <script src="/static/auth-nav.js"></script>
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = this.elements.name.value;
+      const sent = document.getElementById('sent');
+      sent.textContent = 'Thanks ' + name + '! This demo form does not send email, but your message would reach our support team within one business day.';
+      sent.hidden = false;
+      this.reset();
+    });
+  </script>
+</body>
+</html>
