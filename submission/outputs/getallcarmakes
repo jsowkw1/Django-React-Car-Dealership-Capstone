@@ -1,0 +1,239 @@
+$ curl -s "http://localhost:8000/djangoapp/get_cars"
+{
+  "status": 200,
+  "count": 29,
+  "CarModels": [
+    {
+      "id": 18,
+      "CarModel": "3 Series",
+      "CarMake": "BMW",
+      "type": "SEDAN",
+      "year": 2025,
+      "dealer_id": 8
+    },
+    {
+      "id": 19,
+      "CarModel": "X5",
+      "CarMake": "BMW",
+      "type": "SUV",
+      "year": 2026,
+      "dealer_id": 3
+    },
+    {
+      "id": 20,
+      "CarModel": "i4",
+      "CarMake": "BMW",
+      "type": "ELECTRIC",
+      "year": 2025,
+      "dealer_id": 7
+    },
+    {
+      "id": 17,
+      "CarModel": "Bolt EUV",
+      "CarMake": "Chevrolet",
+      "type": "ELECTRIC",
+      "year": 2023,
+      "dealer_id": 6
+    },
+    {
+      "id": 16,
+      "CarModel": "Malibu",
+      "CarMake": "Chevrolet",
+      "type": "SEDAN",
+      "year": 2023,
+      "dealer_id": 4
+    },
+    {
+      "id": 14,
+      "CarModel": "Silverado",
+      "CarMake": "Chevrolet",
+      "type": "TRUCK",
+      "year": 2024,
+      "dealer_id": 2
+    },
+    {
+      "id": 15,
+      "CarModel": "Tahoe",
+      "CarMake": "Chevrolet",
+      "type": "SUV",
+      "year": 2025,
+      "dealer_id": 5
+    },
+    {
+      "id": 11,
+      "CarModel": "Escape",
+      "CarMake": "Ford",
+      "type": "SUV",
+      "year": 2024,
+      "dealer_id": 1
+    },
+    {
+      "id": 13,
+      "CarModel": "Explorer",
+      "CarMake": "Ford",
+      "type": "SUV",
+      "year": 2025,
+      "dealer_id": 5
+    },
+    {
+      "id": 10,
+      "CarModel": "F-150",
+      "CarMake": "Ford",
+      "type": "TRUCK",
+      "year": 2025,
+      "dealer_id": 2
+    },
+    {
+      "id": 12,
+      "CarModel": "Mustang",
+      "CarMake": "Ford",
+      "type": "COUPE",
+      "year": 2025,
+      "dealer_id": 15
+    },
+    {
+      "id": 7,
+      "CarModel": "Accord",
+      "CarMake": "Honda",
+      "type": "SEDAN",
+      "year": 2025,
+      "dealer_id": 10
+    },
+    {
+      "id": 8,
+      "CarModel": "CR-V",
+      "CarMake": "Honda",
+      "type": "SUV",
+      "year": 2025,
+      "dealer_id": 10
+    },
+    {
+      "id": 6,
+      "CarModel": "Civic",
+      "CarMake": "Honda",
+      "type": "SEDAN",
+      "year": 2023,
+      "dealer_id": 1
+    },
+    {
+      "id": 9,
+      "CarModel": "Pilot",
+      "CarMake": "Honda",
+      "type": "SUV",
+      "year": 2024,
+      "dealer_id": 12
+    },
+    {
+      "id": 21,
+      "CarModel": "C-Class",
+      "CarMake": "Mercedes-Benz",
+      "type": "SEDAN",
+      "year": 2025,
+      "dealer_id": 3
+    },
+    {
+      "id": 23,
+      "CarModel": "EQB",
+      "CarMake": "Mercedes-Benz",
+      "type": "ELECTRIC",
+      "year": 2024,
+      "dealer_id": 7
+    },
+    {
+      "id": 22,
+      "CarModel": "GLE",
+      "CarMake": "Mercedes-Benz",
+      "type": "SUV",
+      "year": 2025,
+      "dealer_id": 8
+    },
+    {
+      "id": 24,
+      "CarModel": "Altima",
+      "CarMake": "Nissan",
+      "type": "SEDAN",
+      "year": 2021,
+      "dealer_id": 4
+    },
+    {
+      "id": 27,
+      "CarModel": "Frontier",
+      "CarMake": "Nissan",
+      "type": "TRUCK",
+      "year": 2025,
+      "dealer_id": 14
+    },
+    {
+      "id": 26,
+      "CarModel": "Leaf",
+      "CarMake": "Nissan",
+      "type": "ELECTRIC",
+      "year": 2024,
+      "dealer_id": 6
+    },
+    {
+      "id": 25,
+      "CarModel": "Rogue",
+      "CarMake": "Nissan",
+      "type": "SUV",
+      "year": 2025,
+      "dealer_id": 9
+    },
+    {
+      "id": 29,
+      "CarModel": "Forester",
+      "CarMake": "Subaru",
+      "type": "SUV",
+      "year": 2025,
+      "dealer_id": 13
+    },
+    {
+      "id": 28,
+      "CarModel": "Outback",
+      "CarMake": "Subaru",
+      "type": "WAGON",
+      "year": 2025,
+      "dealer_id": 11
+    },
+    {
+      "id": 4,
+      "CarModel": "4Runner",
+      "CarMake": "Toyota",
+      "type": "SUV",
+      "year": 2025,
+      "dealer_id": 11
+    },
+    {
+      "id": 1,
+      "CarModel": "Camry",
+      "CarMake": "Toyota",
+      "type": "SEDAN",
+      "year": 2025,
+      "dealer_id": 1
+    },
+    {
+      "id": 3,
+      "CarModel": "Prius",
+      "CarMake": "Toyota",
+      "type": "HATCHBACK",
+      "year": 2024,
+      "dealer_id": 13
+    },
+    {
+      "id": 2,
+      "CarModel": "RAV4",
+      "CarMake": "Toyota",
+      "type": "SUV",
+      "year": 2025,
+      "dealer_id": 1
+    },
+    {
+      "id": 5,
+      "CarModel": "Tacoma",
+      "CarMake": "Toyota",
+      "type": "TRUCK",
+      "year": 2026,
+      "dealer_id": 5
+    }
+  ]
+}

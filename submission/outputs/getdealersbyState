@@ -1,0 +1,63 @@
+$ curl -s "http://localhost:3030/fetchDealers/Kansas"
+[
+  {
+    "id": 1,
+    "full_name": "Sunflower State Motors",
+    "short_name": "Sunflower Motors",
+    "address": "2450 N Rock Rd",
+    "city": "Wichita",
+    "state": "Kansas",
+    "st": "KS",
+    "zip": "67226",
+    "lat": 37.7303,
+    "long": -97.2457,
+    "phone": "(316) 555-0141",
+    "description": "Family-owned since 1998, Sunflower State Motors offers new and certified pre-owned Toyota, Honda and Ford vehicles with a 120-point inspection on every used car.",
+    "image": "https://images.unsplash.com/photo-1567818735868-e71b99932e29?w=900&q=70&auto=format&fit=crop"
+  },
+  {
+    "id": 2,
+    "full_name": "Capitol City Auto Group",
+    "short_name": "Capitol City Auto",
+    "address": "1100 SW Wanamaker Rd",
+    "city": "Topeka",
+    "state": "Kansas",
+    "st": "KS",
+    "zip": "66604",
+    "lat": 39.0473,
+    "long": -95.7612,
+    "phone": "(785) 555-0177",
+    "description": "The largest selection of trucks and SUVs in Topeka, with an on-site service center open seven days a week and same-day financing approvals.",
+    "image": "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=900&q=70&auto=format&fit=crop"
+  },
+  {
+    "id": 3,
+    "full_name": "Prairie Village Premium Cars",
+    "short_name": "Prairie Premium",
+    "address": "11900 Metcalf Ave",
+    "city": "Overland Park",
+    "state": "Kansas",
+    "st": "KS",
+    "zip": "66213",
+    "lat": 38.9109,
+    "long": -94.6683,
+    "phone": "(913) 555-0123",
+    "description": "Luxury and performance specialists carrying BMW, Mercedes-Benz and Audi models, plus a concierge test-drive service that brings the car to you.",
+    "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=900&q=70&auto=format&fit=crop"
+  },
+  {
+    "id": 4,
+    "full_name": "Kaw River Car Center",
+    "short_name": "Kaw River Cars",
+    "address": "7700 State Ave",
+    "city": "Kansas City",
+    "state": "Kansas",
+    "st": "KS",
+    "zip": "66112",
+    "lat": 39.1186,
+    "long": -94.7585,
+    "phone": "(913) 555-0190",
+    "description": "Budget-friendly used cars under $20,000, transparent no-haggle pricing and a 30-day exchange guarantee.",
+    "image": "https://images.unsplash.com/photo-1502877338535-766e1452684a?w=900&q=70&auto=format&fit=crop"
+  }
+]

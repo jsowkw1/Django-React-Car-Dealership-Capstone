@@ -1,0 +1,59 @@
+$ curl -s "http://localhost:3030/fetchReviews/dealer/1"
+[
+  {
+    "id": 15,
+    "name": "Capstone Reviewer",
+    "dealership": 1,
+    "review": "Fantastic services! Friendly staff, a quick test drive and transparent pricing on my new Camry.",
+    "purchase": true,
+    "purchase_date": "2026-10-25",
+    "car_make": "Toyota",
+    "car_model": "Camry",
+    "car_year": 2025,
+    "rating": 5,
+    "sentiment": "positive",
+    "created_at": "2026-11-06T10:22:27.643Z"
+  },
+  {
+    "id": 3,
+    "name": "Sofia Ramirez",
+    "dealership": 1,
+    "review": "The paperwork took longer than expected, but the car is excellent and the price was fair.",
+    "purchase": true,
+    "purchase_date": "2025-11-05",
+    "car_make": "Ford",
+    "car_model": "Escape",
+    "car_year": 2024,
+    "rating": 4,
+    "sentiment": "positive",
+    "created_at": "2026-11-06T10:21:13.158Z"
+  },
+  {
+    "id": 2,
+    "name": "Marcus Lee",
+    "dealership": 1,
+    "review": "Great selection of certified used cars and a friendly, helpful staff. I would happily recommend them.",
+    "purchase": true,
+    "purchase_date": "2026-01-22",
+    "car_make": "Honda",
+    "car_model": "Civic",
+    "car_year": 2023,
+    "rating": 5,
+    "sentiment": "positive",
+    "created_at": "2026-11-06T10:21:13.158Z"
+  },
+  {
+    "id": 1,
+    "name": "Emily Carter",
+    "dealership": 1,
+    "review": "Fantastic services from start to finish. The sales team was honest and the financing was quick and easy.",
+    "purchase": true,
+    "purchase_date": "2026-03-14",
+    "car_make": "Toyota",
+    "car_model": "RAV4",
+    "car_year": 2025,
+    "rating": 5,
+    "sentiment": "positive",
+    "created_at": "2026-11-06T10:21:13.158Z"
+  }
+]

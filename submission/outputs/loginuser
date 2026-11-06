@@ -1,0 +1,19 @@
+$ curl -s -c cookies.txt http://localhost:8000/djangoapp/me
+{
+  "userName": "",
+  "isAuthenticated": false
+}
+
+$ curl -s -b cookies.txt -c cookies.txt -X POST http://localhost:8000/djangoapp/login -H "Content-Type: application/json" -H "X-CSRFToken: <csrftoken from cookies.txt>" -d '{"userName": "jsowkw1", "password": "DriveSafe#2026"}'
+{
+  "userName": "jsowkw1",
+  "status": "Authenticated",
+  "user": {
+    "userName": "jsowkw1",
+    "firstName": "Capstone",
+    "lastName": "Reviewer",
+    "email": "jsowkw1.demo@example.com",
+    "isStaff": false,
+    "isAuthenticated": true
+  }
+}

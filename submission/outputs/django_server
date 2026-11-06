@@ -1,0 +1,12 @@
+$ python manage.py runserver 8001
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+November 06, 2026 - 16:18:02
+Django version 5.1.15, using settings 'djangoproj.settings'
+Starting development server at http://127.0.0.1:8001/
+Quit the server with CTRL-BREAK.
+
+[06/Nov/2026 16:18:06] "GET / HTTP/1.1" 200 889
+[06/Nov/2026 16:18:06] "GET /djangoapp/get_dealers HTTP/1.1" 200 7173

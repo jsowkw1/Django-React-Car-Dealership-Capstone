@@ -1,0 +1,16 @@
+$ curl -s "http://localhost:3030/fetchDealer/3"
+{
+  "id": 3,
+  "full_name": "Prairie Village Premium Cars",
+  "short_name": "Prairie Premium",
+  "address": "11900 Metcalf Ave",
+  "city": "Overland Park",
+  "state": "Kansas",
+  "st": "KS",
+  "zip": "66213",
+  "lat": 38.9109,
+  "long": -94.6683,
+  "phone": "(913) 555-0123",
+  "description": "Luxury and performance specialists carrying BMW, Mercedes-Benz and Audi models, plus a concierge test-drive service that brings the car to you.",
+  "image": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=900&q=70&auto=format&fit=crop"
+}
