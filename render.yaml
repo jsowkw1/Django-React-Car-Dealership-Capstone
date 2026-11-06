@@ -1,0 +1,24 @@
+# Render Blueprint: https://render.com/docs/blueprint-spec
+# One free web service running Django + React + Express + MongoDB in a single container.
+services:
+  - type: web
+    name: bestcars-dealership
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /djangoapp/me
+    autoDeploy: true
+    envVars:
+      - key: DEBUG
+        value: 'False'
+      - key: DJANGO_SECRET_KEY
+        generateValue: true
+      - key: EXPRESS_API_KEY
+        generateValue: true
+      # Password for the Django admin "root" user; view it in the Render dashboard (Environment tab).
+      - key: DJANGO_SUPERUSER_PASSWORD
+        generateValue: true
+      # Optional: set to a MongoDB Atlas connection string for persistent reviews.
+      # Leave unset to use the embedded MongoDB (re-seeded on every restart).
+      - key: MONGODB_URI
+        sync: false
