@@ -115,7 +115,9 @@ def main():
         ['-d', f'{{"userName": "{USER}", "firstName": "", "lastName": "", "email": "bad", "password": "123"}}'])
     run('200 OK — logout', ['-X', 'POST', f'{WEB}/djangoapp/logout'] + auth)
 
-    text = '\n'.join(out).replace(PASSWORD, '<demo-password>')
+    text = '\n'.join(out).replace(PASSWORD, '<demo-password>').replace(str(JAR), 'cookies.txt')
+    for t in seen_tokens:
+        text = text.replace(t, '<csrftoken from cookies.txt>')
     (ROOT / 'submission' / 'CURL_COMMANDS.md').write_text(text, encoding='utf-8')
     JAR.unlink(missing_ok=True)
     print('wrote submission/CURL_COMMANDS.md')
